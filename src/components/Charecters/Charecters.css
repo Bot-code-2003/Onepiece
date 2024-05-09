@@ -1,14 +1,15 @@
-.homepage-container {
+.character-page {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
 }
 
-.homepage-container-buttons {
+.character-page-buttons {
+  max-height: 600px;
+  overflow-y: scroll;
   border: 2px solid white;
   padding: 20px;
-  min-height: 600px;
   width: 300px;
   border-radius: 20px;
   display: flex;
@@ -17,7 +18,7 @@
   justify-content: center;
 }
 
-.homepage-container-buttons button {
+.character-page-buttons button {
   color: white;
   font-weight: bold;
   font-size: large;
@@ -29,7 +30,7 @@
   border-radius: 10px;
 }
 
-.homepage-container-buttons button:hover {
+.character-page-buttons button:hover {
   font-weight: bold;
   font-size: large;
   background-color: rgba(255, 255, 255, 0.158);
@@ -39,7 +40,11 @@
   padding: 20px;
 }
 
-.homepage-container-data {
+.active {
+  background-color: rgba(67, 154, 0, 0.701) !important;
+}
+
+.character-page-data {
   max-height: 600px;
   overflow-y: scroll;
   display: flex;
@@ -47,10 +52,10 @@
   gap: 10px;
   font-weight: normal;
   color: white;
-  min-height: 600px;
   width: 1000px;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.8);
+  /* background-color: rgba(128, 0, 128, 0.2); */
   border-radius: 20px;
 }
 
@@ -70,24 +75,8 @@
   border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(45, 104, 0);
-}
-
-.homepage-item {
-  padding: 10px;
-  color: white !important;
-  margin: 0 !important;
-  border-radius: 10px;
-}
-
-.card-container {
-  max-width: 50%;
-}
-
-.active {
-  background-color: rgba(67, 154, 0, 0.701) !important;
 }
 
 .heading-card {
@@ -103,8 +92,12 @@
   font-size: 1.2em;
 }
 
+.card-container {
+  max-width: 50%;
+}
+
 @media only screen and (max-width: 600px) {
-  .homepage-container {
+  .character-page {
     padding: 5px;
     width: auto !important;
     padding-bottom: 30px;
@@ -115,71 +108,35 @@
     align-items: center;
   }
 
-  .card {
-    max-width: 400px !important;
+  .character-page-buttons {
+    gap: 5px;
+    flex-direction: row !important;
+    background-color: black;
+    min-height: 50px !important;
   }
 
-  button {
+  .character-page-buttons button {
     padding: 0px !important;
+    font-weight: normal;
+    font-size: small;
+  }
+
+  .character-page-buttons button:hover {
+    font-weight: normal;
+    font-size: small;
   }
 
   .card-container {
     max-width: 500px !important;
   }
 
-  .homepage-container-buttons {
-    gap: 5px;
-    border: 2px solid white;
-    display: flex;
-    flex-direction: row !important;
-    justify-content: space-evenly;
-    background-color: black;
-    max-height: 50px !important;
-    min-height: 50px !important;
-  }
-
-  .homepage-container-buttons button {
-    color: white;
-    font-weight: normal;
-    font-size: small;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  .homepage-container-buttons button:hover {
-    font-weight: normal;
-    font-size: small;
-    background-color: rgba(255, 255, 255, 0.158);
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 10px;
-  }
-
-  .homepage-container-data {
+  .character-page-data {
     margin-top: 20px;
-    overflow-y: scroll;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    font-weight: normal;
-    color: white;
-    min-height: 700px !important;
     max-height: 700px !important;
-    width: auto !important;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 20px;
     width: auto !important;
   }
 
   .card-container {
-    padding: 5px !important;
-  }
-
-  .card-body {
     padding: 5px !important;
   }
 

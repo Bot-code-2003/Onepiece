@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import data from "../../data/homepage_data.json";
-import "./style.css";
 import { Row, Col, Typography } from "antd";
 import { Card } from "antd";
+import data from "../../data/homepage_data.json";
+import "./HomaPage.css";
 
 const HomePage = () => {
   const { Title } = Typography;

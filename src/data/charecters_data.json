@@ -1,0 +1,118 @@
+{
+  "sections": [
+    {
+      "name": "Monkey D. Luffy",
+      "crew_name": "Straw Hat Pirates",
+      "bounty": "3,000,000,000 berries",
+      "dob": "May 5",
+      "age": "17 Years",
+      "devil_fruit_user": "Yes",
+      "fruit": "Gum gum nomi / Nika nika nomi",
+      "powers": [
+        {
+          "gear1": "Gear 1",
+          "gear2": "Gear 2",
+          "gear3": "Gear 3",
+          "gear4": "Gear 4",
+          "gear5": "Gear 5"
+        }
+      ],
+      "family": [
+        { "key": "father", "value": "Monkey D. Dragon" },
+        { "key": "grandfather", "value": "Monkey D. Garp" },
+        { "key": "brothers", "value": "Portgas D. Ace and Sabo" }
+      ]
+    },
+    {
+      "name": "Roronoa Zoro",
+      "crew_name": "Straw Hat Pirates",
+      "bounty": "1,500,000,000 berries",
+      "dob": "November 11",
+      "age": "21 Years",
+      "devil_fruit_user": "Not a devil fruit user",
+      "fruit": "-"
+    },
+    {
+      "name": "Nami",
+      "crew_name": "Straw Hat Pirates",
+      "bounty": "66,000,000 berries",
+      "dob": "July 3",
+      "age": "20 Years",
+      "devil_fruit_user": "No",
+      "fruit": "-",
+      "family": [{ "key": "Adoptive Mother", "value": "Bell-mère" }]
+    },
+    {
+      "name": "Usopp",
+      "crew_name": "Straw Hat Pirates",
+      "bounty": "200,000,000 berries",
+      "dob": "April 1",
+      "age": "19 Years",
+      "devil_fruit_user": "No",
+      "fruit": "-",
+      "family": "Father: Yasopp"
+    },
+    {
+      "name": "Sanji",
+      "crew_name": "Straw Hat Pirates",
+      "bounty": "330,000,000 berries",
+      "dob": "March 2",
+      "age": "21 Years",
+      "devil_fruit_user": "No",
+      "fruit": "-",
+      "family": "Vinsmoke Family"
+    },
+    {
+      "name": "Tony Tony Chopper",
+      "crew_name": "Straw Hat Pirates",
+      "bounty": "100 berries",
+      "dob": "December 24",
+      "age": "17 Years",
+      "devil_fruit_user": "Yes",
+      "fruit": "Hito hito nomi",
+      "powers": [
+        {
+          "form": "Brain Point",
+          "form2": "Heavy Point",
+          "form3": "Walk Point",
+          "form4": "Jumping Point",
+          "form5": "Arm Point",
+          "form6": "Horn Point",
+          "form7": "Kung Fu Point",
+          "form8": "Monster Point"
+        }
+      ],
+      "family": "Dr. Hiluluk (adoptive father)"
+    },
+    {
+      "name": "Nico Robin",
+      "crew_name": "Straw Hat Pirates",
+      "bounty": "130,000,000 berries",
+      "dob": "February 6",
+      "age": "30 Years",
+      "devil_fruit_user": "Yes",
+      "fruit": "Hana hana nomi",
+      "family": "Ohara"
+    },
+    {
+      "name": "Franky",
+      "crew_name": "Straw Hat Pirates",
+      "bounty": "94,000,000 berries",
+      "dob": "March 9",
+      "age": "36 Years",
+      "devil_fruit_user": "No",
+      "fruit": "-",
+      "family": "Tom (adoptive father)"
+    },
+    {
+      "name": "Brook",
+      "crew_name": "Straw Hat Pirates",
+      "bounty": "83,000,000 berries",
+      "dob": "April 3",
+      "age": "90 Years",
+      "devil_fruit_user": "Yes",
+      "fruit": "Yomi yomi nomi",
+      "family": "Soul King"
+    }
+  ]
+}
