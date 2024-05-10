@@ -77,6 +77,13 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(45, 104, 0);
+  background-image: url("");
+}
+
+.card-img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .heading-card {
@@ -93,7 +100,7 @@
 }
 
 .card-container {
-  max-width: 50%;
+  max-width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
