@@ -73,11 +73,10 @@ const HomePage = () => {
                 className="card-container"
               >
                 <Card
-                  className="card-body card"
+                  className="home-card-body card"
                   style={{
                     display: "flex",
                     alignItems: "center",
-                    backgroundColor: "rgb(0, 0, 0, 0.5)",
                     color: "white",
                     textShadow: "2px 2px 4px black",
                   }}

@@ -20,6 +20,7 @@ const Charecters = () => {
             section.crew_name.toLowerCase().includes(searchTerm.toLowerCase())
         );
 
+  //Convert to Title Cased
   function toTitleCase(str) {
     return str.replace(/\b\w/g, (char) => char.toUpperCase());
   }
@@ -27,6 +28,7 @@ const Charecters = () => {
   return (
     <>
       <div className="character-page">
+        {/* Search Bar */}
         <div className="character-page-search">
           <Input
             style={{
@@ -35,8 +37,9 @@ const Charecters = () => {
               backgroundColor: "rgb(255, 255, 255)",
               color: "black",
               marginBottom: "20px",
+              width: "350px",
             }}
-            placeholder="Search character"
+            placeholder="Search by Character or Crew Name"
             prefix={<SearchOutlined />}
             // Handle input change
             onChange={(event) => setSearchTerm(event.target.value)}
@@ -48,11 +51,11 @@ const Charecters = () => {
             {filteredCharacters.map((selectedCharacterData, index) => (
               <Col key={index} sm={24} xs={24}>
                 <Card
-                  className="card-body card"
+                  className="card-body"
                   style={{
                     width: "100%",
                     minHeight: "600px",
-                    backgroundColor: "rgb(0, 0, 0, 0.5)",
+                    backgroundColor: "rgb(0, 0, 0, 0)",
                     color: "white",
                     textShadow: "2px 2px 4px black",
                   }}
@@ -64,43 +67,57 @@ const Charecters = () => {
                         src={selectedCharacterData.image}
                       />
                       {/* Render character details */}
-                      {selectedCharacterData && (
-                        <div>
-                          {/* Name */}
-                          <h1>{selectedCharacterData.name}</h1>
-                          {/* Crew Name */}
-                          <strong>Crew Name:</strong>{" "}
-                          {selectedCharacterData.crew_name} <br />
-                          {/* Bounty */}
-                          <strong>Bounty:</strong>{" "}
-                          {selectedCharacterData.bounty} <br />
-                          {/* Dob */}
-                          <strong>Date of Birth:</strong>{" "}
-                          {selectedCharacterData.dob} <br />
-                          {/* Age */}
-                          <strong>Age:</strong> {selectedCharacterData.age}{" "}
-                          <br />
-                          {/* Fruit */}
-                          <strong>Devil Fruit User:</strong>{" "}
-                          {selectedCharacterData.devil_fruit_user} <br />
-                          <strong>Fruit:</strong> {selectedCharacterData.fruit}{" "}
-                          <br />
-                          {/* Powers */}
-                          <h1>
-                            {selectedCharacterData.powers && (
-                              <strong>Powers:</strong>
+                      <div
+                        style={{
+                          marginTop: "20px",
+                          display: "flex",
+                          justifyContent: "space-evenly",
+                        }}
+                      >
+                        {selectedCharacterData && (
+                          <Card className="card detail-card">
+                            {/* Name */}
+                            <h1>{selectedCharacterData.name}</h1>
+                            {/* Crew Name */}
+                            <strong>Crew Name:</strong>{" "}
+                            {selectedCharacterData.crew_name} <br />
+                            {/* Bounty */}
+                            <strong>Bounty:</strong>{" "}
+                            {selectedCharacterData.bounty} <br />
+                            {/* Dob */}
+                            <strong>Date of Birth:</strong>{" "}
+                            {selectedCharacterData.dob} <br />
+                            {/* Age */}
+                            <strong>Age:</strong> {selectedCharacterData.age}{" "}
+                            <br />
+                            {/* Fruit */}
+                            <strong>Devil Fruit User:</strong>{" "}
+                            {selectedCharacterData.devil_fruit_user} <br />
+                            <strong>Fruit:</strong>{" "}
+                            {selectedCharacterData.fruit} <br />
+                          </Card>
+                        )}
+
+                        {selectedCharacterData && (
+                          <Card className="detail-card card">
+                            {/* Powers */}
+                            <h1>
+                              {selectedCharacterData.powers && (
+                                <strong>Powers:</strong>
+                              )}
+                            </h1>
+                            {selectedCharacterData.powers.map(
+                              (power, index) => (
+                                <span key={index}>
+                                  {power.value}
+                                  <br />
+                                </span>
+                              )
                             )}
-                          </h1>
-                          {selectedCharacterData.powers.map((power, index) => (
-                            <span key={index}>
-                              <strong>{toTitleCase(power.key)}</strong>{" "}
-                              {power.value}
-                              <br />
-                            </span>
-                          ))}
-                          <br />
-                        </div>
-                      )}
+                            <br />
+                          </Card>
+                        )}
+                      </div>
                     </Col>
                     <Col></Col>
                   </Row>

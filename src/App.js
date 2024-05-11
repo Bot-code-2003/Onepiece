@@ -4,9 +4,9 @@ import PreLoader from "./components/PreLoader";
 import HomePage from "./components/Homepage/HomePage";
 import Navbar from "./components/Navbar";
 import Charecters from "./components/Charecters/Charecters";
-import Myself from "./components/Myself";
-import Creator from "./components/Creator";
-import ContactMe from "./components/ContactMe";
+import Register from "./components/Authentication/Register";
+import Community from "./components/Community/Community";
+import Login from "./components/Authentication/Login";
 import { useMediaQuery } from "react-responsive";
 import "./App.css";
 import Burger from "./components/Burger";
@@ -20,9 +20,9 @@ const App = () => {
       <div className="pages">
         <Routes>
           <Route path="/charecters" exact element={<Charecters />} />
-          <Route path="/creator" exact element={<Creator />} />
-          <Route path="/myself" exact element={<Myself />} />
-          <Route path="/contactme" exact element={<ContactMe />} />
+          <Route path="/community" exact element={<Community />} />
+          <Route path="/register" exact element={<Register />} />
+          <Route path="/login" exact element={<Login />} />
           <Route path="/" exact element={<HomePage />} />
         </Routes>
       </div>
